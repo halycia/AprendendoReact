@@ -1,19 +1,23 @@
 import './App.css';
 import HelloWorld from './components/HelloWorld';
 import MeChamePeloSeuNome from './components/MeChamePeloSeuNome';
+import Pessoa from './components/Pessoa';
+import PessoaVersaoII from './components/PessoaVersaoII';
 
 function App() {
 
-const name = 'Haly'
-const newName = name.toUpperCase()
+  const name = 'Haly'
+  const newName = name.toUpperCase()
 
-function sum(a, b) {
-return a + b 
-}
+  const nome = 'Maria'
 
-const url = "https://via.placeholder.com/120"
+  function sum(a, b) {
+    return a + b
+  }
 
-return (
+  const url = "https://via.placeholder.com/120"
+
+  return (
     <div className="App">
       {/*Aula 03*/}
       <h1>Brincando com o React</h1>
@@ -21,15 +25,25 @@ return (
       <p>Olá, {newName}!</p>
       <p>Soma: {2 + 2}</p>
       <p>Soma: {sum(1, 2)}</p>
-      <img src={url} alt="Imagem dinâmica"/>
-      
+      <img src={url} alt="Imagem dinâmica" />
+
       {/*Aula 04*/}
-      <HelloWorld/>
+      <HelloWorld />
 
       {/*Aula 05 */}
-      <MeChamePeloSeuNome nome = 'Guilherme'/>
-      <MeChamePeloSeuNome nome = 'Haly'/>
-
+      <MeChamePeloSeuNome nome='Guilherme' />
+      <MeChamePeloSeuNome nome='Haly' />
+      <MeChamePeloSeuNome nome={nome} />
+      <Pessoa 
+      nome="Haly" 
+      idade="?" 
+      profissao="aspirante a prog" 
+      foto={url} />
+      <PessoaVersaoII 
+      nome="Haly" 
+      idade="?" 
+      profissao="aspirante a prog"
+      foto={url} />
     </div>
   );
 }
